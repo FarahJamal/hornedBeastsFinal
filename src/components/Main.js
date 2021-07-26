@@ -3,7 +3,7 @@ import HornedBeast from './HornedBeast'
 import HornedData from './HornedData.json';
 import  HarryPotterData from './HarryPotterData.json';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 
 class Main extends React.Component {
