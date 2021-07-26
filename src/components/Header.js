@@ -12,7 +12,7 @@ class Header extends React.Component{
 }
 changePageContent=()=>{
 this.setState({
-     pageTitle: this.state.pageTitle="Welcome to Harry Potter World!"
+     pageTitle: "Welcome to Harry Potter World!"
  
 }
 )

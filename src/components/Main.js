@@ -19,8 +19,8 @@ class Main extends React.Component {
     }
     changePageContent2=()=>{
     this.setState({
-         pageTitle: this.state.pageTitle=HarryPotterData,
-         pageTitle2: this.state.pageTitle="Welcome to Harry Potter World!"
+         pageTitle: HarryPotterData,
+         pageTitle2: "Welcome to Harry Potter World!"
 
      
     }
