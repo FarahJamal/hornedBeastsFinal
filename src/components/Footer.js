@@ -5,8 +5,8 @@ class Footer extends React.Component{
   render(){
     return(
 
-      <div>
-        <p className="parHead">Author : &copy; Farah Jamal </p>
+      <div className="footerDiv">
+        <footer id="footer"><h4>Author : &copy; Farah Jamal </h4></footer>
       </div>
     );
   }

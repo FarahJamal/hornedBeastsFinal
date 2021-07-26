@@ -6,13 +6,14 @@ import Main from './components/Main';
 class App extends React.Component {
   render() {
     return (
-      <div class='body'>
+      <div>
      
+
+
       <Header/>
-      
       <Main/>
-   
-   <Footer />
+      
+      <Footer />
     </div>
     
   )

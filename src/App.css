@@ -22,15 +22,8 @@
 h2,p{
   text-align: center;
 }
-.divs{
-  border: black 2px solid;
-  width: 50%;
-  margin: auto;
-
-}
-.div1{
-  display: flex;
-  justify-content: center;
+divs{
+  float: left;
 }
 .App-header {
   background-color: red;
@@ -44,14 +37,30 @@ h2,p{
   text-align: center;
 }
 .header {
-  text-align: center;
+  text-align: center;	
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 1);
+  color: white;
+  padding: 50px;
 }
+
 .parHead{
   text-align: center;
 }
 .App-link {
   color: #61dafb;
 }
+
+
+#footer {
+  clear: both;	
+  text-align: center;	
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 1);
+  color: white;
+  padding: 50px;
+}
+
 
 @keyframes App-logo-spin {
   from {
@@ -61,3 +70,4 @@ h2,p{
     transform: rotate(360deg);
   }
 }
+

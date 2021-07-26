@@ -1,40 +1,58 @@
 import React from 'react'
 import HornedBeast from './HornedBeast'
+import HornedData from './HornedData.json';
+import  HarryPotterData from './HarryPotterData.json';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
+import Button from 'react-bootstrap/Button';
 
 class Main extends React.Component {
+
+    constructor(props){
+        super(props);
+        this.state={
+            pageTitle:HornedData,
+            pageTitle2:'Welcome To Horned Animals'
+
+        }
+    
+    }
+    changePageContent2=()=>{
+    this.setState({
+         pageTitle: this.state.pageTitle=HarryPotterData,
+         pageTitle2: this.state.pageTitle="Welcome to Harry Potter World!"
+
+     
+    }
+    )
+    }
+
+
+
     render() {
-        let hornedBeast = [
-            {
-                title:"UniWhal",
-                description:"A unicorn and a narwhal nuzzling their horns",
-
-                image_url: "http://3.bp.blogspot.com/_DBYF1AdFaHw/TE-f0cDQ24I/AAAAAAAACZg/l-FdTZ6M7z8/s1600/Unicorn_and_Narwhal_by_dinglehopper.jpg",
-
-        
-            },
-            {
-                title:"Rhino Family",
-                description:"Mother (or father) rhino with two babies"
-,
-            image_url: "https://images.unsplash.com/photo-1512636618879-bbe79107e9e3?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bd9460ee6d1ddbb6b1ca7be86dfc4590&auto=format&fit=crop&w=1825&q=80",
-            },
-            {
-                title:"Unicorn Head",
-                description:"Someone wearing a creepy unicorn head mask",
-
-            image_url: "https://www.dhresource.com/0x0s/f2-albu-g5-M00-1A-11-rBVaI1hsIIiALxKzAAIHjSU3VkE490.jpg/wholesale-halloween-costume-prop-unicorn.jpg",
-            }
-        ]
-
-        return (
+          return (
             <div>
-        <HornedBeast title={hornedBeast[0].title}
-         description={hornedBeast[0].description}
-          image_url={hornedBeast[0].image_url}/>
-         <HornedBeast title={hornedBeast[1].title} description={hornedBeast[1].description} image_url={hornedBeast[1].image_url}/>  
-         <HornedBeast title={hornedBeast[2].title} description={hornedBeast[2].description} image_url={hornedBeast[2].image_url}/>
-            
+                <h1 className="header"> {this.state.pageTitle2} 
+
+    <Button className="button2"variant="primary"onClick={this.changePageContent2} >🔀</Button>
+    </h1>
+
+{ 
+
+
+this.state.pageTitle.map(item=>{
+                    return(
+                        
+                        <HornedBeast
+        
+                            title={item.title}
+                            imgUrl={item.image_url}
+                            description={item.description}
+        
+                        />
+                    )
+                })
+                }
             </div>
 
         )

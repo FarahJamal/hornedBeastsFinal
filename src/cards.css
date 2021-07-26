@@ -1,0 +1,31 @@
+
+.cc{ float: left;
+    width: 33%;
+  height: 450px;
+
+  }
+
+ img{
+     height: 250px;
+
+ }
+.card{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    float: left;
+    width: 33%;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 1);
+  color: white;
+  border-radius: 20px;
+  
+  
+  }
+  .cards{
+      margin-left: 90px;
+  }
+ 
+  
