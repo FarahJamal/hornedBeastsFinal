@@ -12,6 +12,9 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+.centerdModalImage{
+  text-align: center;
+padding-left: 500px;}
 .image{
   width: 350px;
   height: 350px;
