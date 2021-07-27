@@ -4,6 +4,7 @@ import HornedData from './HornedData.json';
 import  HarryPotterData from './HarryPotterData.json';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
+import Hornedbeasts from "./HornedBeast";
 
 class Main extends React.Component {
 
@@ -43,10 +44,13 @@ this.state.pageTitle.map(item=>{
                     return(
                         
                         <HornedBeast
-        
                             title={item.title}
                             imgUrl={item.image_url}
                             description={item.description}
+                            showModal={this.props.stateUpdate}
+                            modalData={this.props.modalData}
+
+
         
                         />
                     )
