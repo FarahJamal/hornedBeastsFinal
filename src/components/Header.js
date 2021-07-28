@@ -1,34 +1,13 @@
-import React from 'react';
-import '../App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-class Header extends React.Component{
+import React from "react";
 
-  constructor(props){
-    super(props);
-    this.state={
-        pageTitle:'Welcome To Horned Animals'
-    }
-
-}
-changePageContent=()=>{
-this.setState({
-     pageTitle: "Welcome to Harry Potter World!"
- 
-}
-)
-}
-
-  render(){
-    return(
-
-      <div>
-
-
-
+class Header extends React.Component {
+  render() {
+    return (
+      <div className="header">
+        <h1>Horned Beasts</h1>
       </div>
-
-
     );
   }
 }
+
 export default Header;

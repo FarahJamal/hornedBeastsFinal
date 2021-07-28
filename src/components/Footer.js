@@ -1,14 +1,13 @@
-import React from 'react';
-import '../App.css';
+import React from "react";
 
-class Footer extends React.Component{
-  render(){
-    return(
-
-      <div className="footerDiv">
-        <footer id="footer"><h4>Author : &copy; Farah Jamal </h4></footer>
+class Footer extends React.Component {
+  render() {
+    return (
+      <div className="header">
+        <h3>done by &copy; Farah Jamal </h3>
       </div>
     );
   }
 }
+
 export default Footer;

@@ -1,64 +1,33 @@
-import React from 'react'
-import HornedBeast from './HornedBeast'
-import HornedData from './HornedData.json';
-import  HarryPotterData from './HarryPotterData.json';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Button from 'react-bootstrap/Button';
+import React from "react";
+import HornedBeasts from "./HornedBeasts";
+import { Col } from "react-bootstrap";
 
 class Main extends React.Component {
+  getData() {
+    let dataArr = JSON.parse(JSON.stringify(this.props.data));
+    return dataArr;
+  }
 
-    constructor(props){
-        super(props);
-        this.state={
-            pageTitle:HornedData,
-            pageTitle2:'Welcome To Horned Animals'
-
-        }
-    
-    }
-    changePageContent2=()=>{
-    this.setState({
-         pageTitle: HarryPotterData,
-         pageTitle2: "Welcome to Harry Potter World!"
-
-     
-    }
-    )
-    }
-
-
-
-    render() {
+  render() {
+    return (
+      <>
+        {this.getData().map((element) => {
           return (
-            <div>
-                <h1 className="header"> {this.state.pageTitle2} 
-
-    <Button className="button2"variant="primary"onClick={this.changePageContent2} >🔀</Button>
-    </h1>
-
-{ 
-
-
-this.state.pageTitle.map(item=>{
-                    return(
-                        
-                        <HornedBeast
-                            title={item.title}
-                            imgUrl={item.image_url}
-                            description={item.description}
-                            showModal={this.props.stateUpdate}
-                            modalData={this.props.modalData}
-
-
-        
-                        />
-                    )
-                })
-                }
-            </div>
-
-        )
-    }
+            <Col lg={4}>
+              <HornedBeasts
+                className="card"
+                title={element.title}
+                image_url={element.image_url}
+                description={element.description}
+                showModal={this.props.stateUpdate}
+                modalData={this.props.modalData}
+              />
+            </Col>
+          );
+        })}
+      </>
+    );
+  }
 }
 
 export default Main;

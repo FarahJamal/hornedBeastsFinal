@@ -1,42 +1,29 @@
-import React from "react";
+import React, { PureComponent } from "react";
 import { Modal, Button } from "react-bootstrap";
 
-class SelectedBeast extends React.Component {
-
-
+class SelectedBeast extends PureComponent {
   render() {
     return (
-
-        <>
-<Modal show={this.props.show} onHide={this.props.hide}>
-                    <Modal.Header closeButton>
-                        <Modal.Title>{this.props.title}</Modal.Title>
-                    </Modal.Header>
-                    <Modal.Body>
-
-                    <p>      
-                        
-                            <img src={this.props.url} alt="images"/>
-</p>
-                    <p>{this.props.desc}</p>
-                    
-
-                    </Modal.Body>
-                    <Modal.Footer>
-                        <Button variant="secondary" onClick={this.props.hide}>
-                            Close
-                        </Button>
-                        <Button variant="primary" onClick=
-                            {this.props.hide}
-                                >
-                            got it! nice pic
-                        </Button>
-                    </Modal.Footer>
-                </Modal>
-        </>
-        );
-    }
+      <Modal show={this.props.show} onHide={this.props.hide}>
+        <Modal.Header closeButton>
+          <Modal.Title>{this.props.title}</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <img
+            style={{ width: "18rem" }}
+            src={this.props.url}
+            alt={this.props.title}
+          />
+          <p>{this.props.desc}</p>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={this.props.hide}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
+    );
   }
-  
-  export default SelectedBeast;
-  
+}
+
+export default SelectedBeast;
