@@ -3,7 +3,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import Modal from 'react-bootstrap/Modal'
 import '../button.css'
 import '../cards.css'
 import '../App.css'

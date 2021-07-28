@@ -4,7 +4,6 @@ import HornedData from './HornedData.json';
 import  HarryPotterData from './HarryPotterData.json';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
-import Hornedbeasts from "./HornedBeast";
 
 class Main extends React.Component {
 
